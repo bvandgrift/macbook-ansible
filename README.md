@@ -1,3 +1,11 @@
+# README: Provisioning your new Mac
+
+This repo contains provisioning for a new Skiplist Mac. Ideally, you
+crack open your new Mac, sign in, retrieve a zip of this repo using
+Safari, and run ./update.sh.
+
+Below are various NOTES, which are works in progress
+
 # Install Notes for new Macbook Pro
 
 ## Set up Apple ID
