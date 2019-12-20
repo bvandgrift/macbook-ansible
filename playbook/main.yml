@@ -1,0 +1,52 @@
+# ansible-playbook -i inventories main.yml
+
+---
+  
+- hosts: all
+  connection: local
+  #  become: yes             # fyi: homebrew is not a fan of root
+                             # instead, we use --ask-become-pass
+                             # when invoking ansible-playbook
+
+  vars:
+    home_directory: /Users/{{ ansible_user_id }}
+    downloads_directory: /{{ home_directory }}/.ansible/downloads
+    # personal_email: <email for git>
+    # personal_name: "name for git"
+  vars_files:
+    - vars/main.yml
+  gather_facts: true
+  roles:
+    - {role: machine_setup, tags: machine_setup}
+    - geerlingguy.homebrew
+    # - {role: install_browsers, tags: browsers}
+    # - {role: install_communications, tags: communications}
+    # - {role: install_docker, tags: docker}
+    # - {role: install_editors, tags: editors}
+    # - {role: install_erlang_elixir, tags: erlang_elixir}
+    # - {role: install_iterm, tags: iterm}
+    # - {role: install_redis, tags: redis}
+    # - {role: install_ruby_build, tags: ruby}
+    # - {role: install_tmux, tags: tmux}
+    # - {role: install_iterm, tags: iterm}
+    # - {role: install_utilities, tags: utilities}
+    # - {role: install_utilities_command_line, tags: utilities_command_line}
+
+    # MAYBE: https://github.com/gantsign/ansible-role-visual-studio-code
+    # - role: gantsign.visual-studio-code
+    #   users:
+    #         - username: {ansible_user_id}
+    #           visual_studio_code_extensions:
+    #             - <extension.name>
+    #             - 
+    #           visual_studio_code_settings: {
+    #             "editor.rulers": [80, 100, 120],
+    #             "editor.renderWhitespace": true,
+    #             "files.associations": {
+    #               "Vagrantfile": "ruby"
+    #             }
+    #           }
+  tasks:    
+    - include: tasks/extra-packages.yml
+      tags: ['extra-packages']
+

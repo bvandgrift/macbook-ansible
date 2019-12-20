@@ -1,0 +1,69 @@
+---
+
+# with thanks to @geerlingguy and @fuzzygroup
+
+homebrew_installed_packages:
+  - autoconf
+  - awscli
+  - bash-completion
+  - doxygen
+  - elixir
+  - erlang
+  - gettext
+  - git
+  - go
+  - gpg
+  - hub
+  - imagemagick
+  - libevent
+  - lynx
+  - mcrypt
+  - openssl
+  - readline
+  - redis
+  - ruby-build
+  - shellcheck
+  - sqlite
+  - tmux
+  - tree 
+  - watchman
+  - wget
+  - wget
+  # - mongo
+  # - postgresql
+
+homebrew_taps:
+  - homebrew/core
+  # - caskroom/cask     # now baked into core
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  # - docker-compose  # included with Docker?
+  - dropbox
+  - firefox
+  - google-chrome
+  - iterm2
+  - keybase
+  - microsoft-office
+  - skitch
+  - slack
+  - transmit
+  - vagrant
+  - virtualbox
+  
+# TODO: add common packages here
+npm_packages: []
+  # - example-packagename
+    
+# TODO: add common packages here
+pip_packages: []
+  # - name: example
+  #   state: present # present/absent/latest, default: present
+  #   version: "0.16.3" # default: N/A
+
+gem_packages: []
+composer_packages: []
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
