@@ -16,11 +16,12 @@ this allows the scripts we'll run to act as superuser without passwords
 
 `sudo visudo` then add line `<username>  ALL = (ALL) NOPASSWD: ALL`
 
-## Install Homebrew:
+## run update.sh
 
-`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+This will install homebrew and ansible if needed, then run ansible on your
+behalf.
 
-## Homebrew installs ansible
+`./update.sh`
 
 # Remaining Questions
 
