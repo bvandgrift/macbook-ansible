@@ -38,6 +38,7 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
+  - 1password
   - docker
   # - docker-compose  # included with Docker?
   - dropbox
@@ -46,6 +47,7 @@ homebrew_cask_apps:
   - iterm2
   - keybase
   - microsoft-office
+  - notion
   - skitch
   - slack
   - transmit
