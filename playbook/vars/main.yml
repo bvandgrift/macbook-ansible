@@ -19,6 +19,9 @@ homebrew_installed_packages:
   - lynx
   - mcrypt
   - openssl
+  # - update as needed!
+  - python@3.8
+  - pipenv
   - readline
   - redis
   - ruby-build
