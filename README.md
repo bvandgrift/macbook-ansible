@@ -1,6 +1,6 @@
 # README: Provisioning your new Mac
 
-This repo contains provisioning for a new Skiplist Mac. Ideally, you
+This repo contains provisioning for a new/reformatted Mac. Ideally, you
 crack open your new Mac, sign in, retrieve a zip of this repo using
 Safari, and run ./update.sh.
 
